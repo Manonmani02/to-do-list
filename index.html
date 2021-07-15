@@ -1,0 +1,93 @@
+<html> 
+   <body>
+  
+  <div id="myDIV" class="header">
+    <h1 style="margin: 3px"> To Do List</h1>
+    <link rel="stylesheet"  href="style.css"/>
+    <input type="text" id="myInput" placeholder="items...">
+    <span onclick="newElement()" class="addBtn">Add items</span>    
+  </div>
+   <ul id="myUL">    
+
+    <li> Do 100 javascript projects  </li>
+        <li> Learn reactjs</li>
+    <li>Learn javascript<span>&#9989;</span> </li>
+    <li>Learn QL</LI>
+    </ul>
+  </body>
+ <button type="submit"  class="registerbtn" id="clear-list" onclick="removeAll()">clear items</button>
+   
+ 
+<style>
+      body {
+        border: 3px solid rgb(164, 177, 159);
+        outline:rgb(204, 219, 204) 5px;
+        margin:  auto;  
+        padding: 77px;
+        text-align: left;
+        width:55%;
+        height:70%;
+      }    
+        </style>
+           <script>
+           var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+function removeAll(){
+  var lst=document.getElementsByTagName("ul");
+  lst[0].innerHTML=" ";
+}
+</script>
+    </html>

@@ -1,0 +1,139 @@
+
+  
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width= device-width, initial-scale=1">
+  <style>
+  body{
+    margin: 10px auto;
+    min-width: 20px; 
+    max-width: 50%;
+    }
+     ul {
+    margin: 0;
+    padding: 0;
+     }
+  ul li {
+    cursor: pointer;
+    position:relative;
+    padding: 12px 12px 12px 12px;
+    list-style-type: none;
+    background: none;
+    font-size: 20px;
+    transition: 0.2s;
+    float:center;
+    margin: 18px 19%;
+    width: 60%;
+    
+    
+    
+       }
+
+  
+  
+  ul li:nth-child(odd) {
+    background:none;
+
+  }
+  ul li:hover {
+    background:rgb(199, 193, 193);
+  }
+  ul li.checked {
+    background:#dfd6d6;
+    color: rgb(19, 15, 15);
+     }
+  ul li.checked::before {
+    content: '';
+    
+    border-color: rgb(231, 225, 225);
+    
+    border-width: 0 2px 2px 0;
+    top: 15px;
+    right: 50px;
+    transform: rotate(45deg);
+    height:10 px;
+    width: 4px;
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 12px 12px 12px;
+  }
+  .close:hover {
+    background-color: hsl(0, 83%, 44%);
+    color: rgb(247, 240, 240);
+  }
+  .header {
+    background-color: #ffffff;
+    padding: 10px 10px;
+    color: rgb(12, 5, 5);
+    text-align: center;
+    
+  }
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+   }
+  
+
+  input {
+    margin: 1%;
+    border:3%;
+    
+    width: 56%;
+    padding: 12px;
+    float: center;
+    font-size: 18px;
+    border-color: #2acc0a;
+  }
+  
+  .addBtn {
+    padding: 10px;
+    width: 8%;
+    background:rgb(145, 161, 145), 236, 236);
+    border-color: #2acc0a;
+    color:#2acc0a; 
+    
+    float:center;
+    text-align:center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2%;
+    
+    border-color: #2acc0a;
+  }
+  
+  .addBtn:hover {
+    background-color: rgb(227, 241, 229)8);
+  }
+  .registerbtn {
+    background-color:#f1f1e8;
+    color: rgb(41, 170, 41);
+    margin: 40px 45%;
+    border-color:rgb(93, 230, 14);
+    cursor:pointer;
+    width: 15%;
+    opacity: 0.9;
+    padding :10px;
+    border: 2%;
+   }
+   .registerbtn:hover {
+    opacity:7;
+   }
+ 
+   
+          }
+      span{
+            content:"\2705";
+            padding:10px 10px 10px 10px;
+            margin:18px 19%;
+          }
+  </body>
+  </style>
+  </html>
+  
